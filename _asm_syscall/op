@@ -1,0 +1,69 @@
+host mmap_min_addr=0x10000
+Reserved 0x201000 bytes of guest address space
+Relocating guest address space from 0x0000000000400000 to 0x400000
+guest_base  0x0
+start            end              size             prot
+0000000000400000-0000000000401000 0000000000001000 r-x
+0000000000600000-0000000000601000 0000000000001000 rw-
+0000004000000000-0000004000001000 0000000000001000 ---
+0000004000001000-0000004000801000 0000000000800000 rw-
+start_brk   0x0000000000000000
+end_code    0x00000000004000d7
+start_code  0x0000000000400000
+start_data  0x00000000006000d8
+end_data    0x00000000006000e5
+start_stack 0x0000004000800060
+brk         0x00000000006000e5
+entry       0x00000000004000b0
+OP:
+ ld_i32 tmp11,env,$0xfffffffffffffffc
+ movi_i32 tmp12,$0x0
+ brcond_i32 tmp11,tmp12,ne,$0x0
+ ---- 0x4000b0
+ movi_i64 tmp0,$0x1
+ ext32u_i64 rax,tmp0
+
+ ---- 0x4000b5
+ movi_i64 tmp0,$0x1
+ ext32u_i64 rdi,tmp0
+
+ ---- 0x4000ba
+ movi_i64 tmp0,$0x6000d8
+ mov_i64 rsi,tmp0
+
+ ---- 0x4000c4
+ movi_i64 tmp0,$0xd
+ ext32u_i64 rdx,tmp0
+
+ ---- 0x4000c9
+ movi_i64 tmp3,$0x4000c9
+ st_i64 tmp3,env,$0x80
+ movi_i32 tmp11,$0x2
+ movi_i64 tmp13,$syscall
+ call tmp13,$0x0,$0,env,tmp11
+ exit_tb $0x0
+ set_label $0x0
+ exit_tb $0x7fef37690013
+
+hello, world!OP:
+ ld_i32 tmp11,env,$0xfffffffffffffffc
+ movi_i32 tmp12,$0x0
+ brcond_i32 tmp11,tmp12,ne,$0x0
+ ---- 0x4000cb
+ movi_i64 tmp0,$0x3c
+ ext32u_i64 rax,tmp0
+
+ ---- 0x4000d0
+ movi_i64 tmp0,$0x0
+ ext32u_i64 rdi,tmp0
+
+ ---- 0x4000d5
+ movi_i64 tmp3,$0x4000d5
+ st_i64 tmp3,env,$0x80
+ movi_i32 tmp11,$0x2
+ movi_i64 tmp13,$syscall
+ call tmp13,$0x0,$0,env,tmp11
+ exit_tb $0x0
+ set_label $0x0
+ exit_tb $0x7fef3769008b
+

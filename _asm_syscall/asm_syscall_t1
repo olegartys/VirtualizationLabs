@@ -1,0 +1,74 @@
+host mmap_min_addr=0x10000
+Reserved 0x201000 bytes of guest address space
+Relocating guest address space from 0x0000000000400000 to 0x400000
+guest_base  0x0
+start            end              size             prot
+0000000000400000-0000000000401000 0000000000001000 r-x
+0000000000600000-0000000000601000 0000000000001000 rw-
+0000004000000000-0000004000001000 0000000000001000 ---
+0000004000001000-0000004000801000 0000000000800000 rw-
+start_brk   0x0000000000000000
+end_code    0x00000000004000d7
+start_code  0x0000000000400000
+start_data  0x00000000006000d8
+end_data    0x00000000006000e5
+start_stack 0x0000004000800080
+brk         0x00000000006000e5
+entry       0x00000000004000b0
+PROLOGUE: [size=40]
+0x7f0a471cd250:  push   %rbp
+0x7f0a471cd251:  push   %rbx
+0x7f0a471cd252:  push   %r12
+0x7f0a471cd254:  push   %r13
+0x7f0a471cd256:  push   %r14
+0x7f0a471cd258:  push   %r15
+0x7f0a471cd25a:  mov    %rdi,%r14
+0x7f0a471cd25d:  add    $0xfffffffffffffb78,%rsp
+0x7f0a471cd264:  jmpq   *%rsi
+0x7f0a471cd266:  add    $0x488,%rsp
+0x7f0a471cd26d:  pop    %r15
+0x7f0a471cd26f:  pop    %r14
+0x7f0a471cd271:  pop    %r13
+0x7f0a471cd273:  pop    %r12
+0x7f0a471cd275:  pop    %rbx
+0x7f0a471cd276:  pop    %rbp
+0x7f0a471cd277:  retq   
+
+OUT: [size=90]
+0x7f0a451cd650:  mov    -0x4(%r14),%ebp
+0x7f0a451cd654:  test   %ebp,%ebp
+0x7f0a451cd656:  jne    0x7f0a451cd69e
+0x7f0a451cd65c:  mov    $0x1,%ebp
+0x7f0a451cd661:  mov    %rbp,(%r14)
+0x7f0a451cd664:  mov    $0x1,%ebp
+0x7f0a451cd669:  mov    %rbp,0x38(%r14)
+0x7f0a451cd66d:  mov    $0x6000d8,%ebp
+0x7f0a451cd672:  mov    %rbp,0x30(%r14)
+0x7f0a451cd676:  mov    $0xd,%ebp
+0x7f0a451cd67b:  mov    %rbp,0x10(%r14)
+0x7f0a451cd67f:  movq   $0x4000c9,0x80(%r14)
+0x7f0a451cd68a:  mov    %r14,%rdi
+0x7f0a451cd68d:  mov    $0x2,%esi
+0x7f0a451cd692:  callq  0x7f0a44e905b0
+0x7f0a451cd697:  xor    %eax,%eax
+0x7f0a451cd699:  jmpq   0x7f0a471cd266
+0x7f0a451cd69e:  lea    -0x524d692(%rip),%rax        # 0x7f0a3ff80013
+0x7f0a451cd6a5:  jmpq   0x7f0a471cd266
+
+hello, world!OUT: [size=69]
+0x7f0a451cd6b0:  mov    -0x4(%r14),%ebp
+0x7f0a451cd6b4:  test   %ebp,%ebp
+0x7f0a451cd6b6:  jne    0x7f0a451cd6e9
+0x7f0a451cd6bc:  mov    $0x3c,%ebp
+0x7f0a451cd6c1:  mov    %rbp,(%r14)
+0x7f0a451cd6c4:  xor    %ebp,%ebp
+0x7f0a451cd6c6:  mov    %rbp,0x38(%r14)
+0x7f0a451cd6ca:  movq   $0x4000d5,0x80(%r14)
+0x7f0a451cd6d5:  mov    %r14,%rdi
+0x7f0a451cd6d8:  mov    $0x2,%esi
+0x7f0a451cd6dd:  callq  0x7f0a44e905b0
+0x7f0a451cd6e2:  xor    %eax,%eax
+0x7f0a451cd6e4:  jmpq   0x7f0a471cd266
+0x7f0a451cd6e9:  lea    -0x524d665(%rip),%rax        # 0x7f0a3ff8008b
+0x7f0a451cd6f0:  jmpq   0x7f0a471cd266
+

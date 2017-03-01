@@ -1,0 +1,57 @@
+host mmap_min_addr=0x10000
+Reserved 0x1000 bytes of guest address space
+Relocating guest address space from 0x0000000000400000 to 0x400000
+guest_base  0x0
+start            end              size             prot
+0000000000400000-0000000000401000 0000000000001000 r-x
+0000004000000000-0000004000001000 0000000000001000 ---
+0000004000001000-0000004000801000 0000000000800000 rw-
+start_brk   0x0000000000000000
+end_code    0x0000000000400093
+start_code  0x0000000000400000
+start_data  0x0000000000400093
+end_data    0x0000000000400093
+start_stack 0x0000004000800060
+brk         0x0000000000400093
+entry       0x0000000000400080
+PROLOGUE: [size=40]
+0x7ff1b659d250:  push   %rbp
+0x7ff1b659d251:  push   %rbx
+0x7ff1b659d252:  push   %r12
+0x7ff1b659d254:  push   %r13
+0x7ff1b659d256:  push   %r14
+0x7ff1b659d258:  push   %r15
+0x7ff1b659d25a:  mov    %rdi,%r14
+0x7ff1b659d25d:  add    $0xfffffffffffffb78,%rsp
+0x7ff1b659d264:  jmpq   *%rsi
+0x7ff1b659d266:  add    $0x488,%rsp
+0x7ff1b659d26d:  pop    %r15
+0x7ff1b659d26f:  pop    %r14
+0x7ff1b659d271:  pop    %r13
+0x7ff1b659d273:  pop    %r12
+0x7ff1b659d275:  pop    %rbx
+0x7ff1b659d276:  pop    %rbp
+0x7ff1b659d277:  retq   
+
+OUT: [size=93]
+0x7ff1b459d650:  mov    -0x4(%r14),%ebp
+0x7ff1b459d654:  test   %ebp,%ebp
+0x7ff1b459d656:  jne    0x7ff1b459d6a1
+0x7ff1b459d65c:  xor    %ebp,%ebp
+0x7ff1b459d65e:  mov    %rbp,(%r14)
+0x7ff1b459d661:  movq   $0x400085,0x80(%r14)
+0x7ff1b459d66c:  mov    %r14,%rdi
+0x7ff1b459d66f:  callq  0x7ff1b425f2e0
+0x7ff1b459d674:  mov    $0x3c,%ebp
+0x7ff1b459d679:  mov    %rbp,(%r14)
+0x7ff1b459d67c:  xor    %ebp,%ebp
+0x7ff1b459d67e:  mov    %rbp,0x38(%r14)
+0x7ff1b459d682:  movq   $0x400091,0x80(%r14)
+0x7ff1b459d68d:  mov    %r14,%rdi
+0x7ff1b459d690:  mov    $0x2,%esi
+0x7ff1b459d695:  callq  0x7ff1b42605b0
+0x7ff1b459d69a:  xor    %eax,%eax
+0x7ff1b459d69c:  jmpq   0x7ff1b659d266
+0x7ff1b459d6a1:  lea    -0x524d695(%rip),%rax        # 0x7ff1af350013
+0x7ff1b459d6a8:  jmpq   0x7ff1b659d266
+
