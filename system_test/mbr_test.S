@@ -9,7 +9,7 @@ start:
     mov ax, 07C0h       ; Set data segment to where we're loaded
     mov ds, ax
 
-    mov eax, 0x1488228
+    mov eax, 0x123456 ; run cpuid
     cpuid
 
     mov si, text_string ; Put string position into SI
@@ -18,7 +18,7 @@ start:
     jmp $           ; Jump here - infinite loop!
 
 
-    text_string db 'This is my cool new OS!', 0
+    text_string db 'Hello world!', 0
 
 
 print_string:           ; Routine: output string in SI to screen
