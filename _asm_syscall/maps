@@ -1,0 +1,52 @@
+00400000-00401000 r-xp 00000000 08:03 3354660                            /home/oleglevin/VirtualizationLabs/_asm_syscall/asm_syscall
+00401000-00600000 ---p 00000000 00:00 0 
+00600000-00601000 rw-p 00000000 08:03 3354660                            /home/oleglevin/VirtualizationLabs/_asm_syscall/asm_syscall
+4000000000-4000001000 ---p 00000000 00:00 0 
+4000001000-4000803000 rw-p 00000000 00:00 0 
+7f00d69d0000-7f00d8369000 rw-p 00000000 00:00 0 
+7f00d8369000-7f00d836a000 ---p 00000000 00:00 0 
+7f00d836a000-7f00d8b6a000 rw-p 00000000 00:00 0                          [stack:10813]
+7f00d8b6a000-7f00d8ba7000 r-xp 00000000 08:01 658168                     /lib/x86_64-linux-gnu/libpcre.so.3.13.1
+7f00d8ba7000-7f00d8da6000 ---p 0003d000 08:01 658168                     /lib/x86_64-linux-gnu/libpcre.so.3.13.1
+7f00d8da6000-7f00d8da7000 r--p 0003c000 08:01 658168                     /lib/x86_64-linux-gnu/libpcre.so.3.13.1
+7f00d8da7000-7f00d8da8000 rw-p 0003d000 08:01 658168                     /lib/x86_64-linux-gnu/libpcre.so.3.13.1
+7f00d8da8000-7f00d8f62000 r-xp 00000000 08:01 658187                     /lib/x86_64-linux-gnu/libc-2.19.so
+7f00d8f62000-7f00d9162000 ---p 001ba000 08:01 658187                     /lib/x86_64-linux-gnu/libc-2.19.so
+7f00d9162000-7f00d9166000 r--p 001ba000 08:01 658187                     /lib/x86_64-linux-gnu/libc-2.19.so
+7f00d9166000-7f00d9168000 rw-p 001be000 08:01 658187                     /lib/x86_64-linux-gnu/libc-2.19.so
+7f00d9168000-7f00d916d000 rw-p 00000000 00:00 0 
+7f00d916d000-7f00d9186000 r-xp 00000000 08:01 658179                     /lib/x86_64-linux-gnu/libpthread-2.19.so
+7f00d9186000-7f00d9385000 ---p 00019000 08:01 658179                     /lib/x86_64-linux-gnu/libpthread-2.19.so
+7f00d9385000-7f00d9386000 r--p 00018000 08:01 658179                     /lib/x86_64-linux-gnu/libpthread-2.19.so
+7f00d9386000-7f00d9387000 rw-p 00019000 08:01 658179                     /lib/x86_64-linux-gnu/libpthread-2.19.so
+7f00d9387000-7f00d938b000 rw-p 00000000 00:00 0 
+7f00d938b000-7f00d9490000 r-xp 00000000 08:01 658172                     /lib/x86_64-linux-gnu/libm-2.19.so
+7f00d9490000-7f00d968f000 ---p 00105000 08:01 658172                     /lib/x86_64-linux-gnu/libm-2.19.so
+7f00d968f000-7f00d9690000 r--p 00104000 08:01 658172                     /lib/x86_64-linux-gnu/libm-2.19.so
+7f00d9690000-7f00d9691000 rw-p 00105000 08:01 658172                     /lib/x86_64-linux-gnu/libm-2.19.so
+7f00d9691000-7f00d9698000 r-xp 00000000 08:01 658186                     /lib/x86_64-linux-gnu/librt-2.19.so
+7f00d9698000-7f00d9897000 ---p 00007000 08:01 658186                     /lib/x86_64-linux-gnu/librt-2.19.so
+7f00d9897000-7f00d9898000 r--p 00006000 08:01 658186                     /lib/x86_64-linux-gnu/librt-2.19.so
+7f00d9898000-7f00d9899000 rw-p 00007000 08:01 658186                     /lib/x86_64-linux-gnu/librt-2.19.so
+7f00d9899000-7f00d999f000 r-xp 00000000 08:01 658294                     /lib/x86_64-linux-gnu/libglib-2.0.so.0.4002.0
+7f00d999f000-7f00d9b9e000 ---p 00106000 08:01 658294                     /lib/x86_64-linux-gnu/libglib-2.0.so.0.4002.0
+7f00d9b9e000-7f00d9b9f000 r--p 00105000 08:01 658294                     /lib/x86_64-linux-gnu/libglib-2.0.so.0.4002.0
+7f00d9b9f000-7f00d9ba0000 rw-p 00106000 08:01 658294                     /lib/x86_64-linux-gnu/libglib-2.0.so.0.4002.0
+7f00d9ba0000-7f00d9ba1000 rw-p 00000000 00:00 0 
+7f00d9ba1000-7f00d9bc4000 r-xp 00000000 08:01 658180                     /lib/x86_64-linux-gnu/ld-2.19.so
+7f00d9dc3000-7f00d9dc4000 r--p 00022000 08:01 658180                     /lib/x86_64-linux-gnu/ld-2.19.so
+7f00d9dc4000-7f00d9dc5000 rw-p 00023000 08:01 658180                     /lib/x86_64-linux-gnu/ld-2.19.so
+7f00d9dc5000-7f00d9dc6000 rw-p 00000000 00:00 0 
+7f00d9dc6000-7f00d9f42000 r-xp 00000000 08:03 3709847                    /home/oleglevin/src/qemu/x86_64-linux-user/qemu-x86_64
+7f00da09a000-7f00da120000 rw-p 00000000 00:00 0 
+7f00da13f000-7f00da141000 rw-p 00000000 00:00 0 
+7f00da141000-7f00da174000 r--p 0017b000 08:03 3709847                    /home/oleglevin/src/qemu/x86_64-linux-user/qemu-x86_64
+7f00da174000-7f00da188000 rw-p 001ae000 08:03 3709847                    /home/oleglevin/src/qemu/x86_64-linux-user/qemu-x86_64
+7f00da188000-7f00da19c000 rw-p 00000000 00:00 0 
+7f00da19c000-7f00dc19b000 rwxp 00000000 00:00 0 
+7f00dc19b000-7f00dc19c000 ---p 00000000 00:00 0 
+7f00dc19c000-7f00dc1a6000 rw-p 00000000 00:00 0 
+7f00dcf14000-7f00dcf56000 rw-p 00000000 00:00 0                          [heap]
+7ffd67b56000-7ffd67b77000 rw-p 00000000 00:00 0                          [stack]
+7ffd67bb4000-7ffd67bb6000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
